@@ -1,0 +1,5 @@
+{
+  "name": "워킹메이트 (Walking Mate)",
+  "description": "세대별 맞춤 걷기 나들이 가이드",
+  "requestFramePermissions": ["geolocation"]
+}
