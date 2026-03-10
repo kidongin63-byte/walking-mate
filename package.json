@@ -7,7 +7,7 @@
     "dev": "concurrently \"npm run dev:server\" \"npm run dev:client\"",
     "dev:server": "tsx --watch server/index.ts",
     "dev:client": "vite --port=3000 --host=0.0.0.0",
-    "build": "vite build",
+    "build": "vite build && npm run migrate",
     "preview": "vite preview",
     "clean": "rm -rf dist",
     "lint": "tsc --noEmit",
