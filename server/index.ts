@@ -49,6 +49,15 @@ app.get('/api/courses', (req, res) => {
   res.json(courses);
 });
 
+// Serve static files in production
+const distPath = path.join(__dirname, '../dist');
+if (fs.existsSync(distPath)) {
+  app.use(express.static(distPath));
+  app.get('*', (req, res) => {
+    res.sendFile(path.join(distPath, 'index.html'));
+  });
+}
+
 app.listen(port, '127.0.0.1', () => {
   console.log(`Server running at http://127.0.0.1:${port}`);
 });

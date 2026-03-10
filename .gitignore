@@ -1,8 +1,9 @@
-node_modules/
-build/
-dist/
-coverage/
+node_modules
+dist
+.env
+*.db
+*.db-journal
 .DS_Store
-*.log
-.env*
-!.env.example
+.vscode
+.idea
+build

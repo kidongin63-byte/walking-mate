@@ -11,7 +11,8 @@
     "preview": "vite preview",
     "clean": "rm -rf dist",
     "lint": "tsc --noEmit",
-    "migrate": "tsx server/migrate.ts"
+    "migrate": "tsx server/migrate.ts",
+    "start": "tsx server/index.ts"
   },
   "dependencies": {
     "@google/genai": "^1.29.0",
