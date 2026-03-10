@@ -8,7 +8,8 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 const app = express();
-const port = 3030;
+const port = process.env.PORT || 3030;
+const host = '0.0.0.0';
 const dbPath = path.join(__dirname, 'walking_mate.db');
 
 const db = new Database(dbPath);
@@ -58,6 +59,6 @@ if (fs.existsSync(distPath)) {
   });
 }
 
-app.listen(port, '127.0.0.1', () => {
-  console.log(`Server running at http://127.0.0.1:${port}`);
+app.listen(Number(port), host, () => {
+  console.log(`Server running at http://${host}:${port}`);
 });
